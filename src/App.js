@@ -27,10 +27,10 @@ function App() {
         <h1>Home</h1>
       </header>
       <body>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        <Post author='Jin'/>
+        <Post author='Kazuya'/>
+        <Post author='Heihachi'/>
+        <Post author='Yoshimitsu'/>
       </body>
 
     </div>

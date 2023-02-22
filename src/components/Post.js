@@ -1,11 +1,11 @@
 import React from "react"
 
-function Post() {
+function Post(props) {
 
     return (
 
         <div className="Post">
-            <h5>Anonymus</h5>
+            <h4>{props.author}</h4>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

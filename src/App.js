@@ -3,7 +3,8 @@ import './App.css';
 import Button from './components/Button';
 import Post from './components/Post';
 import Counter from './components/Counter';
-
+import ParentsAndChildren from './components/ParentsAndChildren';
+import List from './components/List';
 
 function App() {
   return (
@@ -36,8 +37,13 @@ function App() {
 
       <Counter/>
 
+      <ParentsAndChildren />
+
+      <List />
+
     </div>
   );
 }
 
 export default App;
+

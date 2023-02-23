@@ -7,8 +7,8 @@ class Counter extends React.Component {
         count: 1
     }
 
-    // Not recommended
-    // Modifies state directly without using the current state, 
+    // Incorrect way to update state: 
+    // directly modifying the state without using the current state 
     // which can lead to synchronization issues and inconsistent rendering
     _incrementCount = () => {
         this.setState({
@@ -19,9 +19,11 @@ class Counter extends React.Component {
     // Recommended
     // Returns an object that represents the updated state
     incrementCount = () => {
-        this.setState(prevState => ({
-            count: prevState.count + 1
-        }));
+        setTimeout(() => {
+            this.setState(prevState => ({
+                count: prevState.count + 1
+            }));
+        }, 2000);
     };
 
     render() {

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Button from './components/Button';
 import Post from './components/Post';
+import Counter from './components/Counter';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         </a> *
       </header> */}
 
-      <header>
+      {/* <header>
         <h1>Home</h1>
       </header>
       <body>
@@ -31,7 +32,9 @@ function App() {
         <Post author='Kazuya'/>
         <Post author='Heihachi'/>
         <Post author='Yoshimitsu'/>
-      </body>
+      </body> */}
+
+      <Counter/>
 
     </div>
   );

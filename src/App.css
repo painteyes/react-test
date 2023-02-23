@@ -46,3 +46,11 @@
   text-align: left;
 }
 
+.Counter {
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}

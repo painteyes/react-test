@@ -31,7 +31,21 @@ function App() {
         <h1>Home</h1>
       </header>
       <body>
-        {state.authors.map((author) => (<Post author={author.name} key={author.id} />))}
+
+      {// Versione con arrow function esplicita:
+      state.authors.map((author) => {
+        // Utilizziamo le parentesi graffe per creare un blocco di codice all'interno della funzione arrow.
+        // La parola chiave "return" restituisce l'elemento del Post.
+        return <Post author={author.name} key={author.id} />;
+      })}
+
+      {// Versione con sintassi più compatta:
+      state.authors.map((author) => (
+        // Utilizziamo le parentesi tonde per evitare di dover scrivere la parola chiave "return"
+        // La sintassi più compatta rende il codice più leggibile in alcuni casi.
+        <Post author={author.name} key={author.id} />
+      ))}
+      
       </body> 
 
       <Counter/>

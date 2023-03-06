@@ -15,10 +15,10 @@ function App() {
 
   const initialState = {
     authors: [
-      <Post author="Jin" key="1" />,
-      <Post author="Kazuya" key="2" />,
-      <Post author="Heihachi" key="3" />,
-      <Post author="Yoshimitsu" key="4" />,
+      {name: "Jin", id: 1},
+      {name: "Kazuya", id: 2},
+      {name: "Heihachi", id: 3},
+      {name: "Yoshimitsu", id: 4},
     ]
   };
   
@@ -30,29 +30,52 @@ function App() {
       <header>
         <h1>Home</h1>
       </header>
+
       <body>
 
-      {// Versione con arrow function esplicita:
-      state.authors.map((author) => {
-        // Utilizziamo le parentesi graffe per creare un blocco di codice all'interno della funzione arrow.
-        // La parola chiave "return" restituisce l'elemento del Post.
-        return <Post author={author.name} key={author.id} />;
-      })}
+        <div className='container' style={{display:'flex', justifyContent:'space-between'}}>
 
-      {// Versione con sintassi più compatta:
-      state.authors.map((author) => (
-        // Utilizziamo le parentesi tonde per evitare di dover scrivere la parola chiave "return"
-        // La sintassi più compatta rende il codice più leggibile in alcuni casi.
-        <Post author={author.name} key={author.id} />
-      ))}
-      
+        
+          <div>
+            <h2>Posts</h2>
+            {// Versione con arrow function esplicita:
+            state.authors.map((author) => {
+              // Utilizziamo le parentesi graffe per creare un blocco di codice all'interno della funzione arrow.
+              // La parola chiave "return" restituisce l'elemento del Post.
+              console.log(author.name)
+
+              return <Post author={author.name} key={author.id} />;
+            })}
+
+            {// Versione con sintassi più compatta:
+            state.authors.map((author) => (
+              // Utilizziamo le parentesi tonde per evitare di dover scrivere la parola chiave "return"
+              // La sintassi più compatta rende il codice più leggibile in alcuni casi.
+              <Post author={author.name} key={author.id} />
+            ))}
+          </div>
+
+
+            <div>
+              <h2>Games</h2>
+              <Counter/>
+
+              <ParentsAndChildren />
+
+              <List />
+            </div>
+
+          
+
+         
+
+        </div>
+
+
       </body> 
 
-      <Counter/>
 
-      <ParentsAndChildren />
-
-      <List />
+      
 
     </div>
   );

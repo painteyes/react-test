@@ -1,10 +1,10 @@
 // ChildB.jsx
 import React from 'react';
 
-function ChildB({ sharedState }) {
+function ChildB({ count }) {
   return (
     <div>
-      Child B: {sharedState}
+      Child B: {count}
     </div>
   );
 }

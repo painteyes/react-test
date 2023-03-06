@@ -10,7 +10,8 @@ class Counter extends React.Component {
     // Incorrect way to update state: 
     // directly modifying the state without using the current state 
     // which can lead to synchronization issues and inconsistent rendering
-    _incrementCount = () => {
+    _incrementCount = async () => {
+        await new Promise(resolve => setTimeout(resolve, 2000));
         this.setState({
             count: this.state.count + 1
         });
@@ -30,8 +31,9 @@ class Counter extends React.Component {
         return (
             <div className="Counter">
                 <h4>Counter</h4>
-                <h3>{this.state.count}</h3>
-                <button onClick={this.incrementCount}>+1</button>
+                <span>(with 2 seconds delay)</span>
+                <h5>{this.state.count}</h5>
+                <button onClick={this.incrementCount}>Increment</button>
             </div>
         )
     }

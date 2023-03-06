@@ -34,7 +34,7 @@ function ListComponent({ items, onSelect }) {
 function SelectionComponent({ selected }) {
   return (
     <div>
-      <h2>Elementi selezionati:</h2>
+      <h4>Selected elements:</h4>
       <ul>
         {selected.map((item) => (
           <li key={item.id}>{item.label}</li>
@@ -58,8 +58,8 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Seleziona gli elementi:</h1>
+    <div className="List">
+      <h4>Select elements:</h4>
       <ListComponent items={items} onSelect={handleSelectionChange} />
       <SelectionComponent selected={selected} />
     </div>

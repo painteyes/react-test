@@ -40,9 +40,10 @@
 .Post {
   border: 1px solid #282c34;
   border-radius: 20px;
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-bottom: 15px;
   padding: 20px;
-  width: 300px;
+  width: 500px;
   text-align: left;
 }
 
@@ -51,6 +52,29 @@
   border-radius: 20px;
   margin: 50px auto;
   padding: 20px;
-  width: 300px;
+  width: 500px;
+  text-align: center;
+}
+
+.Actions {
+  text-align: left;
+  margin-left: 5px;
+}
+
+.ParentsAndChildren {
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.List {
+  border: 1px solid #282c34;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 20px;
+  width: 500px;
   text-align: center;
 }

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Button from './components/Button';
 import Post from './components/Post';
@@ -6,34 +5,34 @@ import Counter from './components/Counter';
 import ParentsAndChildren from './components/ParentsAndChildren';
 import List from './components/List';
 
+
+import React, { useState } from 'react';
+
+/* Alternative syntax
+const app = () => {
+*/
 function App() {
+
+  const initialState = {
+    authors: [
+      <Post author="Jin" key="1" />,
+      <Post author="Kazuya" key="2" />,
+      <Post author="Heihachi" key="3" />,
+      <Post author="Yoshimitsu" key="4" />,
+    ]
+  };
+  
+  const [state, setState] = useState(initialState);
+
   return (
     <div className="App">
 
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> *
-      </header> */}
-
-      {/* <header>
+      <header>
         <h1>Home</h1>
       </header>
       <body>
-        <Post author='Jin'/>
-        <Post author='Kazuya'/>
-        <Post author='Heihachi'/>
-        <Post author='Yoshimitsu'/>
-      </body> */}
+        {state.authors.map((author) => (<Post author={author.name} key={author.id} />))}
+      </body> 
 
       <Counter/>
 
